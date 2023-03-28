@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    font-size: 16px;
+    line-height: 24px;
+    color: #374151;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+.flow-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.flow-content {
+    width: 640px;
+    border-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.step-indicator {
+    padding: 32px;
+    padding-bottom: 16px;
+    font-size: 18px;
+    color: #5B21B6;
+    text-transform: uppercase;
+    font-weight: 500;
+
+}
+
+.step-body {
+    padding: 32px;
+    padding-top: 0;
+}
+
+button {
+    height: 40px;
+    padding: 4px 16px;
+    border-radius: 20px;
+    min-width: 100px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.btn-primary  {
+    background: #7C3AED;
+    color: #FFF;
+    border-color: #7C3AED;
+}
+
+.btn-primary:hover {
+    background: #5B21B6;
+    border-color: #5B21B6;
+}
+
+.btn-secondary:hover {
+    background: #F5F3FF;
+}
+
+
+.btn-secondary {
+    background: #FFF;
+    color: #7C3AED;
+    border-color: #7C3AED
+}
+
+.actions-container {
+    background: #F4F4F5;
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+}
+
+input[type="text"] {
+    height: 40px;
+    width: 360px;
+    margin-top: 16px;
+    border-radius: 4px;
+    font-size: 16px;
+    padding: 8px;
+    color: #374151;
+    border: 2px solid #94A3B8;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="text"]:active {
+    border-color: #64748B;
+    outline: none;
+}
+
+.step-requirement {
+    font-size: 14px;
+    color: #3730A3;
+}
