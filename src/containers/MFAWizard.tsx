@@ -6,17 +6,22 @@ export interface MFAWizardProps {
 }
 
 const MFAWizard: React.FC<MFAWizardProps> = ({ steps }) => {
-  const {
-    setStepsCount,
-    stepsCount,
-    currentStep,
-    moveToNextStep,
-    moveToPreviousStep,
-  } = React.useContext(MFAWizardContext);
+  const [currentStep, setCurrentStep] = React.useState(1);
+  const wizardContext = React.useContext(MFAWizardContext);
 
-  React.useEffect(() => {
-    setStepsCount(steps.length);
-  }, [steps, setStepsCount]);
+  const stepsCount = steps.length;
+
+  const moveToNextStep = () => {
+    if (currentStep < stepsCount) {
+      setCurrentStep((currStep) => currStep + 1);
+    }
+  };
+
+  const moveToPreviousStep = () => {
+    if (currentStep > 0) {
+      setCurrentStep((currStep) => currStep - 1);
+    }
+  };
 
   const stepToRender = steps[currentStep - 1];
 
