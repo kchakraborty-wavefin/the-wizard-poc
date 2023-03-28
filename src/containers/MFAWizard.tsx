@@ -18,7 +18,7 @@ const MFAWizard: React.FC<MFAWizardProps> = ({ steps }) => {
   };
 
   const moveToPreviousStep = () => {
-    if (currentStep > 0) {
+    if (currentStep > 1) {
       setCurrentStep((currStep) => currStep - 1);
     }
   };
